@@ -1,0 +1,36 @@
+name: Check TanStack Docs Update
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # 每天上午 9 点 UTC
+  workflow_dispatch:
+
+jobs:
+  check-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout your repo
+        uses: actions/checkout@v3
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add TanStack Remote
+        run: |
+          git remote add tanstack-table https://github.com/TanStack/table.git || true
+          git fetch tanstack-table
+
+      - name: Pull latest /docs from upstream
+        run: |
+          git subtree pull --prefix=upstream-docs tanstack-table main --squash
+
+      - name: Check if /docs changed
+        run: |
+          if git diff --quiet HEAD^ HEAD -- upstream-docs; then
+            echo "✅ No changes in /docs"
+          else
+            echo "::warning ::🚨 TanStack 官方文档有更新，请同步翻译！"
+          fi
