@@ -3,7 +3,9 @@ import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  title: 'TanStack Table 中文文档',  
+  title: 'TanStack Table 中文文档',
+  base: '/tanstack-table-docs/',
+  outDir: 'doc_build',  
   themeConfig: {
     nav: [
       {
