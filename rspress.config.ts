@@ -4,8 +4,9 @@ import { defineConfig } from 'rspress/config';
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
   title: 'TanStack Table 中文文档',
+  description: 'TanStack Table 是一个无头的、TypeScript 优先的表格库，为所有框架提供强大的数据网格体验。',
   base: '/tanstack-table-docs/',
-  outDir: 'doc_build',  
+  outDir: 'doc_build',
   themeConfig: {
     nav: [
       {
