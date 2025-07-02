@@ -1,0 +1,37 @@
+[
+  {
+    "type":"file",
+    "label": "表格",
+    "name": "table"
+  },
+  {
+    "type":"file",
+    "label": "列定义",
+    "name": "column-def"
+  },
+  {
+    "type":"file",
+    "label": "列",
+    "name": "column"
+  },
+  {
+    "type":"file",
+    "label": "行",
+    "name": "row"
+  },
+  {
+    "type":"file",
+    "label": "单元格",
+    "name": "cell"
+  },
+  {
+    "type":"file",
+    "label": "表头组",
+    "name": "header-group"
+  },
+  {
+    "type":"file",
+    "label": "表头",
+    "name": "header"
+  }
+]

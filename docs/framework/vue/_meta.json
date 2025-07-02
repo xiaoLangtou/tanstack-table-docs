@@ -1,0 +1,12 @@
+[
+  {
+    "type": "file",
+    "name": "vue-table",
+    "label": "Vue Table"
+  },
+  {
+    "type": "dir",
+    "name": "guide",
+    "label": "指南"
+  }
+]

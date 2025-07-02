@@ -1,0 +1,37 @@
+[
+  {
+    "type": "dir",
+    "name": "react",
+    "label": "React"
+  },
+  {
+    "type": "dir",
+    "name": "vue",
+    "label": "Vue"
+  },
+  {
+    "type": "dir",
+    "name": "angular",
+    "label": "Angular"
+  },
+  {
+    "type": "dir",
+    "name": "svelte",
+    "label": "Svelte"
+  },
+  {
+    "type": "dir",
+    "name": "solid",
+    "label": "Solid"
+  },
+  {
+    "type": "dir",
+    "name": "qwik",
+    "label": "Qwik"
+  },
+  {
+    "type": "dir",
+    "name": "lit",
+    "label": "Lit"
+  }
+]

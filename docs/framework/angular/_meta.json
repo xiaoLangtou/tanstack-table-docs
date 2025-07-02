@@ -1,0 +1,12 @@
+[
+  {
+    "type": "file",
+    "name": "angular-table",
+    "label": "Angular Table"
+  },
+  {
+    "type": "dir",
+    "name": "guide",
+    "label": "指南"
+  }
+]

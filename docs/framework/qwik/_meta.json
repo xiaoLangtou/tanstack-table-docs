@@ -1,0 +1,12 @@
+[
+  {
+    "type": "file",
+    "name": "qwik-table",
+    "label": "Qwik Table"
+  },
+  {
+    "type": "dir",
+    "name": "guide",
+    "label": "指南"
+  }
+]

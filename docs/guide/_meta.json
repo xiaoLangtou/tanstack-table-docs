@@ -1,0 +1,153 @@
+[
+  "guide",
+  {
+    "type":"file",
+    "label": "功能概览",
+    "name": "features"
+  },
+  {
+    "type":"file",
+    "label": "数据",
+    "name": "data"
+  },
+  {
+    "type":"file",
+    "label": "表格",
+    "name": "tables"
+  },
+  {
+    "type":"file",
+    "label": "列定义",
+    "name": "column-defs"
+  },
+  {
+    "type":"file",
+    "label": "列",
+    "name": "columns"
+  },
+  {
+    "type":"file",
+    "label": "行",
+    "name": "rows"
+  },
+  {
+    "type":"file",
+    "label": "行模型",
+    "name": "row-models"
+  },
+  {
+    "type":"file",
+    "label": "单元格",
+    "name": "cells"
+  },
+  {
+    "type":"file",
+    "label": "表头组",
+    "name": "header-groups"
+  },
+  {
+    "type":"file",
+    "label": "表头",
+    "name": "headers"
+  },
+  {
+    "type":"file",
+    "label": "列过滤",
+    "name": "column-filtering"
+  },
+  {
+    "type":"file",
+    "label": "全局过滤",
+    "name": "global-filtering"
+  },
+  {
+    "type":"file",
+    "label": "模糊过滤",
+    "name": "fuzzy-filtering"
+  },
+  {
+    "type":"file",
+    "label": "过滤器",
+    "name": "filters"
+  },
+  {
+    "type":"file",
+    "label": "列分面",
+    "name": "column-faceting"
+  },
+  {
+    "type":"file",
+    "label": "全局分面",
+    "name": "global-faceting"
+  },
+  {
+    "type":"file",
+    "label": "排序",
+    "name": "sorting"
+  },
+  {
+    "type":"file",
+    "label": "分组",
+    "name": "grouping"
+  },
+  {
+    "type":"file",
+    "label": "展开",
+    "name": "expanding"
+  },
+  {
+    "type":"file",
+    "label": "分页",
+    "name": "pagination"
+  },
+  {
+    "type":"file",
+    "label": "列排序",
+    "name": "column-ordering"
+  },
+  {
+    "type":"file",
+    "label": "列固定",
+    "name": "column-pinning"
+  },
+  {
+    "type":"file",
+    "label": "行固定",
+    "name": "row-pinning"
+  },
+  {
+    "type":"file",
+    "label": "固定",
+    "name": "pinning"
+  },
+  {
+    "type":"file",
+    "label": "列大小调整",
+    "name": "column-sizing"
+  },
+  {
+    "type":"file",
+    "label": "列可见性",
+    "name": "column-visibility"
+  },
+  {
+    "type":"file",
+    "label": "行选择",
+    "name": "row-selection"
+  },
+  {
+    "type":"file",
+    "label": "虚拟化",
+    "name": "virtualization"
+  },
+  {
+    "type":"file",
+    "label": "自定义功能",
+    "name": "custom-features"
+  },
+  {
+    "type":"file",
+    "label": "迁移指南",
+    "name": "migrating"
+  }
+]

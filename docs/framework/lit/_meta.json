@@ -1,0 +1,12 @@
+[
+  {
+    "type": "file",
+    "name": "lit-table",
+    "label": "Lit Table"
+  },
+  {
+    "type": "dir",
+    "name": "guide",
+    "label": "指南"
+  }
+]

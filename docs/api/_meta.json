@@ -1,0 +1,12 @@
+[
+  {
+    "type": "dir",
+    "name": "core",
+    "label": "核心 API"
+  },
+  {
+    "type": "dir",
+    "name": "features",
+    "label": "功能 API"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "type": "file",
+    "name": "svelte-table",
+    "label": "Svelte Table"
+  },
+  {
+    "type": "dir",
+    "name": "guide",
+    "label": "指南"
+  }
+]

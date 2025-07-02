@@ -1,0 +1,82 @@
+[
+  {
+    "type":"file",
+    "label": "列过滤",
+    "name": "column-filtering"
+  },
+  {
+    "type":"file",
+    "label": "列分面",
+    "name": "column-faceting"
+  },
+  {
+    "type":"file",
+    "label": "列排序",
+    "name": "column-ordering"
+  },
+  {
+    "type":"file",
+    "label": "列固定",
+    "name": "column-pinning"
+  },
+  {
+    "type":"file",
+    "label": "列大小调整",
+    "name": "column-sizing"
+  },
+  {
+    "type":"file",
+    "label": "列可见性",
+    "name": "column-visibility"
+  },
+  {
+    "type":"file",
+    "label": "全局分面",
+    "name": "global-faceting"
+  },
+  {
+    "type":"file",
+    "label": "全局过滤",
+    "name": "global-filtering"
+  },
+  {
+    "type":"file",
+    "label": "排序",
+    "name": "sorting"
+  },
+  {
+    "type":"file",
+    "label": "分组",
+    "name": "grouping"
+  },
+  {
+    "type":"file",
+    "label": "展开",
+    "name": "expanding"
+  },
+  {
+    "type":"file",
+    "label": "分页",
+    "name": "pagination"
+  },
+  {
+    "type":"file",
+    "label": "固定",
+    "name": "pinning"
+  },
+  {
+    "type":"file",
+    "label": "过滤器",
+    "name": "filters"
+  },
+  {
+    "type":"file",
+    "label": "行固定",
+    "name": "row-pinning"
+  },
+  {
+    "type":"file",
+    "label": "行选择",
+    "name": "row-selection"
+  }
+]
