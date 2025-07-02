@@ -45,13 +45,13 @@
 
 ```bash
 # 安装依赖
-npm install
+pnpm install
 
 # 构建项目
-npm run build
+pnpm run build
 
 # 预览构建结果
-npm run preview
+pnpm run preview
 ```
 
 ### 5. 故障排除

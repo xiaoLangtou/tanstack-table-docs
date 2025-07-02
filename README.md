@@ -16,12 +16,12 @@
 ### 环境要求
 
 - Node.js 18+
-- npm 或 yarn
+- pnpm（推荐）或 npm
 
 ### 安装依赖
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 开发服务器
@@ -29,7 +29,7 @@ npm install
 启动开发服务器：
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### 构建生产版本
@@ -37,7 +37,7 @@ npm run dev
 构建网站：
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ### 本地预览
@@ -45,7 +45,7 @@ npm run build
 预览生产构建：
 
 ```bash
-npm run preview
+pnpm run preview
 ```
 
 ## 部署
@@ -96,7 +96,7 @@ npm run preview
 ## 技术栈
 
 - **文档框架**：[RSPress](https://rspress.dev/)
-- **构建工具**：Node.js + npm
+- **构建工具**：Node.js + pnpm
 - **部署平台**：GitHub Pages
 - **CI/CD**：GitHub Actions
 

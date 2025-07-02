@@ -28,16 +28,16 @@ jobs:
         with:
           fetch-depth: 0  # 不需要完整历史记录，但需要最近的提交
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: pnpm
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
