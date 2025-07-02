@@ -13,8 +13,6 @@ permissions:
   id-token: write
   actions: read
   deployments: write
-  repository-projects: read
-  metadata: read
 
 # 只允许一个并发部署，跳过正在运行和最新排队之间的运行
 # 但是，不要取消正在进行的运行，因为我们希望让这些生产部署完成
