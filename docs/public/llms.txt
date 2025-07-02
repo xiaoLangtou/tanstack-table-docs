@@ -1,0 +1,167 @@
+# TanStack Table 文档项目 - LLMs 信息
+
+## 项目概述
+
+这是一个基于 RSPress 构建的 TanStack Table 中文文档网站，提供了完整的 API 参考、使用指南和框架集成文档。TanStack Table 是一个强大的无头（headless）表格库，支持多种前端框架。
+
+## 核心特性
+
+- **无头设计**：不提供预设的 UI 组件，完全由开发者控制样式和交互
+- **轻量级**：核心库体积小，按需加载功能模块
+- **功能丰富**：支持排序、过滤、分页、分组、展开等完整表格功能
+- **多框架支持**：React、Vue、Angular、Svelte、Solid、Qwik、Lit
+- **TypeScript 优先**：完整的类型安全支持
+- **高性能**：虚拟化支持，处理大数据集
+- **可定制性**：灵活的配置选项和扩展机制
+
+## 文档结构
+
+### 根目录文件
+- `index.md` - 项目主页，介绍核心特性
+- `introduction.md` - 详细介绍无头 UI 概念
+- `_meta.json` - 文档导航结构配置
+
+### API 文档 (`/docs/api/`)
+
+#### 核心 API (`/docs/api/core/`)
+- `table.md` - 表格实例的核心方法和属性
+- `column-def.md` - 列定义配置选项
+- `column.md` - 列实例的方法和属性
+- `row.md` - 行实例的方法和属性
+- `cell.md` - 单元格实例的方法和属性
+- `header.md` - 表头实例的方法和属性
+- `header-group.md` - 表头组实例的方法和属性
+
+#### 功能 API (`/docs/api/features/`)
+
+**过滤功能**
+- `column-filtering.md` - 单列过滤功能
+- `column-faceting.md` - 列值分面统计
+- `global-filtering.md` - 全表搜索功能
+- `global-faceting.md` - 全局分面统计
+- `filters.md` - 通用过滤器
+
+**排序功能**
+- `sorting.md` - 列排序功能
+
+**布局功能**
+- `column-pinning.md` - 列固定功能
+- `column-ordering.md` - 列重新排序
+- `column-sizing.md` - 列宽度调整
+- `column-visibility.md` - 列显示/隐藏
+- `pinning.md` - 通用固定功能
+- `row-pinning.md` - 行固定功能
+
+**交互功能**
+- `expanding.md` - 行展开/折叠
+- `grouping.md` - 行分组功能
+- `pagination.md` - 分页功能
+- `row-selection.md` - 行选择功能
+
+### 指南文档 (`/docs/guide/`)
+- `features.md` - 功能指南总览
+- `column-ordering.md` - 列排序指南
+- `column-pinning.md` - 列固定指南
+- `column-sizing.md` - 列大小调整指南
+- `column-visibility.md` - 列可见性指南
+- `expanding.md` - 展开功能指南
+- `column-faceting.md` - 列分面指南
+- `column-filtering.md` - 列筛选指南
+- `global-faceting.md` - 全局分面指南
+- `global-filtering.md` - 全局筛选指南
+- `grouping.md` - 分组功能指南
+- `pagination.md` - 分页功能指南
+- `row-pinning.md` - 行固定指南
+- `row-selection.md` - 行选择指南
+- `sorting.md` - 排序功能指南
+- `virtualization.md` - 虚拟化指南
+
+### 框架集成文档 (`/docs/framework/`)
+
+#### 支持的框架
+- `react/` - React 集成 (`@tanstack/react-table`)
+- `vue/` - Vue 3 集成 (`@tanstack/vue-table`)
+- `angular/` - Angular 集成 (`@tanstack/angular-table`)
+- `svelte/` - Svelte 集成 (`@tanstack/svelte-table`)
+- `solid/` - Solid.js 集成 (`@tanstack/solid-table`)
+- `qwik/` - Qwik 集成 (`@tanstack/qwik-table`)
+- `lit/` - Lit 集成 (`@tanstack/lit-table`)
+
+#### 通用概念
+- 一致的 API 设计
+- 完整的 TypeScript 支持
+- 功能完整性
+- 框架特定的性能优化
+
+### 企业版文档 (`/docs/enterprise/`)
+- 企业级功能和支持
+- 高级特性说明
+- 商业许可信息
+
+## 技术架构
+
+### 核心 API 设计
+
+**表格创建函数**
+- `useReactTable` (React)
+- `createSolidTable` (Solid)
+- `useQwikTable` (Qwik)
+- `useVueTable` (Vue)
+- `createSvelteTable` (Svelte)
+
+**核心选项**
+- `data` - 表格数据数组
+- `columns` - 列定义数组
+- `defaultColumn` - 默认列选项
+- `initialState` - 初始状态
+- `state` - 受控状态
+- `onStateChange` - 状态变更回调
+- `meta` - 表格元数据上下文
+
+**状态管理**
+- 可见性状态 (VisibilityTableState)
+- 列排序状态 (ColumnOrderTableState)
+- 列固定状态 (ColumnPinningTableState)
+- 过滤状态 (FiltersTableState)
+- 排序状态 (SortingTableState)
+- 展开状态 (ExpandedTableState)
+- 分组状态 (GroupingTableState)
+- 列大小状态 (ColumnSizingTableState)
+- 分页状态 (PaginationTableState)
+- 行选择状态 (RowSelectionTableState)
+
+### 无头设计理念
+
+TanStack Table 采用无头设计，意味着：
+- 不提供预设的 UI 组件
+- 完全由开发者控制样式和交互
+- 专注于数据逻辑和状态管理
+- 与任何 UI 库或设计系统兼容
+- 提供完整的渲染控制权
+
+### 性能优化
+
+- **虚拟化支持**：处理大数据集
+- **智能重新计算**：仅在必要时重新处理数据
+- **内存优化**：高效的状态管理
+- **框架特定优化**：针对各框架特性优化
+
+## 文档特点
+
+1. **结构清晰**：按功能模块组织，易于查找
+2. **多语言支持**：提供中文文档
+3. **完整的 API 参考**：详细的类型定义和选项说明
+4. **实用的使用指南**：包含实际代码示例
+5. **多框架覆盖**：支持主流前端框架
+6. **企业级支持**：提供商业版本和支持
+
+## 开发和部署
+
+- **构建工具**：RSPress (基于 Rspack)
+- **部署平台**：GitHub Pages
+- **CI/CD**：GitHub Actions 自动化部署
+- **配置文件**：`rspress.config.ts`
+- **输出目录**：`doc_build`
+- **基础路径**：`/tanstack-table-docs-website/`
+
+这个文档项目为开发者提供了使用 TanStack Table 所需的全部信息，从基础概念到高级功能，从 API 参考到实际应用，是一个完整的学习和参考资源。
