@@ -6,8 +6,8 @@ title: 表格状态（React）指南
 
 想要跳到实现部分？查看这些示例：
 
-- [kitchen sink](../examples/kitchen-sink)
-- [fully controlled](../examples/fully-controlled)
+- [kitchen sink](https://github.com/TanStack/table/tree/main/examples/react/kitchen-sink)
+- [fully controlled](https://github.com/TanStack/table/tree/main/examples/react/fully-controlled)
 
 ## 表格状态（React）指南
 

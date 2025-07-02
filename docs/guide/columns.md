@@ -4,11 +4,11 @@ title: 列指南
 
 ## API
 
-[Column API](../api/core/column)
+[Column API](../api/core/column.md)
 
 ## 列指南
 
-> 注意：本指南是关于在表格实例中生成的实际 `column` 对象，而不是关于为您的表格设置[列定义](column-defs)。
+> 注意：本指南是关于在表格实例中生成的实际 `column` 对象，而不是关于为您的表格设置[列定义](column-defs.md)。
 
 本快速指南将讨论在 TanStack Table 中检索和与 `column` 对象交互的不同方式。
 
@@ -18,7 +18,7 @@ title: 列指南
 
 #### 标题和单元格对象
 
-在您使用 `table` 实例 API 之前，请考虑您是否实际需要检索[标题](headers)或[单元格](cells)而不是 `columns`。如果您正在渲染表格的标记，您很可能想要使用返回标题或单元格而不是列的 API。列对象本身并不真正用于渲染标题或单元格，但 `header` 和 `cell` 对象将包含对这些 `column` 对象的引用，从中它们可以获得渲染其 UI 所需的信息。
+在您使用 `table` 实例 API 之前，请考虑您是否实际需要检索[标题](headers.md)或[单元格](cells.md)而不是 `columns`。如果您正在渲染表格的标记，您很可能想要使用返回标题或单元格而不是列的 API。列对象本身并不真正用于渲染标题或单元格，但 `header` 和 `cell` 对象将包含对这些 `column` 对象的引用，从中它们可以获得渲染其 UI 所需的信息。
 
 ```js
 const column = cell.column; // 从单元格获取列
@@ -47,7 +47,7 @@ const column = table.getColumn('firstName');
 
 #### 列 ID
 
-每个列都必须在其关联的[列定义](column-defs)中定义唯一的 `id`。通常，您自己定义此 `id`，或者它从列定义中的 `accessorKey` 或 `header` 属性派生。
+每个列都必须在其关联的[列定义](column-defs.md)中定义唯一的 `id`。通常，您自己定义此 `id`，或者它从列定义中的 `accessorKey` 或 `header` 属性派生。
 
 #### ColumnDef
 
@@ -67,6 +67,6 @@ const column = table.getColumn('firstName');
 
 ### 列渲染
 
-不要直接使用 `column` 对象来渲染 `headers` 或 `cells`。相反，使用[`header`](headers)和[`cell`](cells)对象，如上所述。
+不要直接使用 `column` 对象来渲染 `headers` 或 `cells`。相反，使用[`header`](headers.md)和[`cell`](cells.md)对象，如上所述。
 
 但是，如果您只是在 UI 的其他地方渲染列列表，例如列可见性菜单或类似的东西，您可以只是映射列数组并像往常一样渲染 UI。

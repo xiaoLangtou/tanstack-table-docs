@@ -1,223 +1,270 @@
-# TanStack Table 自定义主题指南
+# TanStack Table 文档网站自定义主题指南
 
-## 🎨 主题概述
+## 概述
 
-我为 TanStack Table 文档网站设计了一个现代化的自定义主题，采用 CSS-only 的方式实现，确保兼容性和性能。
+本文档介绍了为 TanStack Table 文档网站创建的基于 Rspress 2.0 的自定义主题方案。该主题通过扩展默认主题实现，采用现代化设计理念，提供了优雅的视觉体验和良好的用户交互。
 
-## ✨ 主题特色
+## 特色功能
 
-### 🎯 设计理念
-- **品牌一致性**：使用 TanStack 官方色彩（橙色到蓝色渐变）
-- **现代化设计**：采用流行的渐变色、阴影和圆角设计
-- **用户体验优先**：注重可读性、导航便利性和视觉层次
-- **响应式设计**：完美适配桌面端、平板和移动端
+### 🎨 设计特色
+- **品牌色彩系统**：采用 TanStack 橙色 (#ff6b35) 作为主色调
+- **现代渐变效果**：多层次渐变背景和视觉特效
+- **响应式设计**：完美适配桌面端和移动端
+- **暗色主题支持**：自动适配系统主题偏好
 
-### 🌈 色彩系统
-```css
-/* 主色调 */
---tanstack-primary: #ff6b35;     /* TanStack 橙色 */
---tanstack-secondary: #4a90e2;   /* TanStack 蓝色 */
---tanstack-accent: #7b68ee;      /* 紫色强调色 */
+### 🚀 功能增强
+- **自定义 Hero 区域**：首页增强展示区域
+- **智能文档提示**：页面底部友好提示信息
+- **品牌化导航**：导航栏增加品牌标识
+- **优化的代码展示**：增强的代码块和语法高亮
 
-/* 渐变色 */
---tanstack-gradient-primary: linear-gradient(135deg, #ff6b35 0%, #4a90e2 100%);
-```
+## 实现方式
 
-### 🎭 视觉特效
-- **渐变背景**：Hero 区域使用品牌渐变色
-- **网格纹理**：Hero 背景添加微妙的网格图案
-- **悬停动画**：按钮和卡片的流畅过渡效果
-- **阴影层次**：多层次阴影营造深度感
-- **动画效果**：淡入上升动画增强视觉体验
+### 1. 主题结构
 
-## 📁 文件结构
+基于 Rspress 2.0 的主题扩展方式，项目结构如下：
 
 ```
-/docs/.vitepress/theme/
-└── custom.css          # 主题样式文件
+├── theme/
+│   ├── index.tsx          # 主题入口文件
+│   └── styles/
+│       └── custom.css     # 自定义样式文件
+├── rspress.config.ts      # Rspress 配置文件
+└── docs/                  # 文档内容
 ```
 
-## 🚀 实现方式
+### 2. 配置文件设置
 
-### 1. CSS-Only 方案
-选择纯 CSS 实现的原因：
-- ✅ **兼容性好**：不依赖复杂的组件重写
-- ✅ **性能优异**：无额外 JavaScript 开销
-- ✅ **维护简单**：样式集中管理，易于修改
-- ✅ **升级友好**：不影响 Rspress 框架升级
+在 `rspress.config.ts` 中指定自定义主题路径：
 
-### 2. 配置方式
-在 `rspress.config.ts` 中引入：
 ```typescript
-const customCSS = path.join(__dirname, 'docs/.vitepress/theme/custom.css');
+import * as path from 'path';
+import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
-  // ...
-  globalStyles: customCSS,
-  // ...
+  root: path.join(__dirname, 'docs'),
+  title: 'TanStack Table 中文文档',
+  theme: path.join(__dirname, 'theme'), // 指定主题目录
+  // ... 其他配置
 });
 ```
 
-## 🎨 主要样式组件
+### 3. 主题入口文件
 
-### 1. Hero 区域
-- **渐变背景**：品牌色彩渐变
-- **网格纹理**：SVG 网格图案叠加
-- **大标题**：3.5rem 字体，文字阴影
-- **行动按钮**：主要、次要、轮廓三种样式
+`theme/index.tsx` 文件通过扩展默认主题的 Layout 组件实现：
 
-### 2. 功能特性卡片
-- **卡片设计**：白色背景，圆角边框
-- **悬停效果**：上升动画 + 阴影变化
-- **图标展示**：大号 emoji 图标
-- **渐进动画**：错开的淡入效果
+```tsx
+import { Layout as BasicLayout } from 'rspress/theme';
+import './styles/custom.css';
 
-### 3. 导航栏
-- **毛玻璃效果**：半透明背景 + 模糊滤镜
-- **品牌标识**：渐变色文字效果
-- **边框分隔**：细线分隔增强层次
+const Layout = () => (
+  <BasicLayout
+    beforeNavTitle={<span>🚀</span>}
+    afterHero={/* 自定义 Hero 内容 */}
+    beforeDocFooter={/* 自定义文档页脚 */}
+    bottom={/* 自定义底部内容 */}
+  />
+);
 
-### 4. 内容区域
-- **代码块**：深色背景，语法高亮
-- **表格样式**：圆角边框，悬停高亮
-- **引用块**：左侧彩色边框，背景色区分
-- **链接效果**：下划线悬停动画
+const setup = () => {
+  // 全局初始化逻辑
+};
 
-### 5. 响应式设计
+export { Layout, setup };
+export * from 'rspress/theme';
+```
+
+### 4. 样式文件位置
+
+自定义样式文件位于：`theme/styles/custom.css`
+
+## 主要样式组件
+
+### 色彩系统
+
 ```css
-/* 平板和手机 */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-  .features-grid { grid-template-columns: 1fr; }
-}
-
-/* 手机端 */
-@media (max-width: 480px) {
-  .hero h1 { font-size: 2rem; }
-  .btn { width: 100%; }
+:root {
+  /* 品牌色彩 */
+  --tanstack-primary: #ff6b35;
+  --tanstack-primary-light: #ff8c5a;
+  --tanstack-primary-dark: #e55a2b;
+  --tanstack-secondary: #4f46e5;
+  --tanstack-accent: #06b6d4;
+  
+  /* 渐变色 */
+  --tanstack-gradient: linear-gradient(135deg, var(--tanstack-primary) 0%, var(--tanstack-secondary) 100%);
+  --tanstack-hero-gradient: linear-gradient(135deg, #ff6b35 0%, #4f46e5 50%, #06b6d4 100%);
 }
 ```
 
-## 🛠️ 自定义指南
+### 插槽组件
+
+#### Hero 区域增强
+- 位置：首页 Hero 部分之后
+- 功能：展示产品特色和价值主张
+- 样式：渐变背景 + 网格纹理
+
+#### 文档页脚提示
+- 位置：正文页 Footer 部分之前
+- 功能：提供帮助链接和友好提示
+- 样式：卡片式设计 + 左侧强调边框
+
+#### 底部版权信息
+- 位置：整个页面最底部
+- 功能：显示版权和许可信息
+- 样式：渐变背景 + 居中布局
+
+## 响应式设计
+
+### 断点设置
+- **桌面端**：> 768px
+- **移动端**：≤ 768px
+
+### 移动端优化
+```css
+@media (max-width: 768px) {
+  .custom-hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-gradient h2 {
+    font-size: 2rem;
+  }
+}
+```
+
+## 自定义指南
 
 ### 修改品牌色彩
-在 `custom.css` 中修改 CSS 变量：
+
+在 `theme/styles/custom.css` 中修改 CSS 变量：
+
 ```css
 :root {
-  --tanstack-primary: #your-color;     /* 主色调 */
-  --tanstack-secondary: #your-color;   /* 次要色调 */
-  --tanstack-accent: #your-color;      /* 强调色 */
+  --tanstack-primary: #your-color;
+  --tanstack-primary-light: #your-light-color;
+  --tanstack-primary-dark: #your-dark-color;
 }
 ```
 
-### 调整间距和尺寸
-```css
-:root {
-  --tanstack-space-xs: 0.25rem;   /* 最小间距 */
-  --tanstack-space-sm: 0.5rem;    /* 小间距 */
-  --tanstack-space-md: 1rem;      /* 中等间距 */
-  --tanstack-space-lg: 1.5rem;    /* 大间距 */
-  --tanstack-space-xl: 2rem;      /* 超大间距 */
-}
+### 添加新的插槽内容
+
+在 `theme/index.tsx` 中添加更多插槽：
+
+```tsx
+const Layout = () => (
+  <BasicLayout
+    // 现有插槽...
+    beforeDoc={<YourCustomComponent />}
+    afterDoc={<AnotherCustomComponent />}
+  />
+);
 ```
 
-### 修改圆角和阴影
-```css
-:root {
-  --tanstack-radius-sm: 0.25rem;  /* 小圆角 */
-  --tanstack-radius-md: 0.375rem; /* 中圆角 */
-  --tanstack-radius-lg: 0.5rem;   /* 大圆角 */
-  --tanstack-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-```
+### 自定义组件样式
 
-## 🌙 暗色主题支持
+1. 在 CSS 文件中定义样式类
+2. 在 JSX 组件中使用 className
+3. 遵循 BEM 命名规范
 
-主题自动支持暗色模式：
+## 暗色主题支持
+
+主题自动检测系统主题偏好，并提供暗色模式变量：
+
 ```css
 .dark {
-  --tanstack-gray-50: #1f2937;
-  --tanstack-gray-900: #ffffff;
-  /* 其他暗色变量 */
+  --tanstack-primary: #ff8c5a;
+  --tanstack-primary-light: #ffab7a;
+  --tanstack-primary-dark: #ff6b35;
 }
 ```
 
-## 📱 浏览器兼容性
+## 浏览器兼容性
 
-- ✅ Chrome ≥ 88
-- ✅ Firefox ≥ 85  
-- ✅ Safari ≥ 14
-- ✅ Edge ≥ 88
+- **现代浏览器**：Chrome 88+, Firefox 85+, Safari 14+
+- **CSS 特性**：CSS 变量、Grid 布局、Flexbox
+- **JavaScript**：ES2020+ 语法支持
 
-## 🚀 性能优化
+## 性能优化
 
-### CSS 优化策略
-- **CSS 变量**：减少重复代码，便于主题切换
-- **现代布局**：使用 Flexbox 和 Grid 布局
-- **硬件加速**：transform 和 opacity 动画
-- **选择器优化**：避免深层嵌套选择器
+### CSS 优化
+- 使用 CSS 变量减少重复代码
+- 合理使用 CSS 选择器，避免过度嵌套
+- 利用 GPU 加速的 transform 和 opacity 属性
 
-### 加载性能
-- **单文件引入**：所有样式集中在一个文件
-- **无外部依赖**：不依赖外部字体或图片
-- **压缩友好**：CSS 结构便于压缩
+### 资源加载
+- 样式文件通过主题入口统一加载
+- 避免内联样式，提高缓存效率
+- 使用 SVG 图标替代位图
 
-## 🎯 最佳实践
+## 最佳实践
 
-### 1. 样式组织
-- 按功能模块组织样式
-- 使用 CSS 变量统一管理
-- 保持选择器简洁明了
-
-### 2. 响应式设计
-- 移动端优先的设计思路
-- 合理的断点设置
-- 灵活的网格布局
-
-### 3. 可访问性
-- 足够的颜色对比度
-- 清晰的焦点指示器
-- 语义化的 HTML 结构
-
-## 🔧 故障排除
-
-### 样式不生效
-1. 检查 `rspress.config.ts` 中的 `globalStyles` 配置
-2. 确认 CSS 文件路径正确
-3. 重启开发服务器清除缓存
-
-### 响应式问题
-1. 检查媒体查询断点
-2. 确认 viewport meta 标签
-3. 测试不同设备尺寸
-
-### 兼容性问题
-1. 检查 CSS 属性支持情况
-2. 添加浏览器前缀
-3. 提供降级方案
-
-## 📈 未来扩展
-
-### 可能的增强功能
-- **主题切换器**：用户可选择不同主题
-- **动画库集成**：更丰富的动画效果
-- **组件库**：可复用的 UI 组件
-- **国际化支持**：多语言界面适配
+### 开发建议
+1. **模块化设计**：将样式按功能模块分离
+2. **语义化命名**：使用有意义的 CSS 类名
+3. **渐进增强**：确保基础功能在所有环境下可用
+4. **可访问性**：遵循 WCAG 2.1 AA 标准
 
 ### 维护建议
-- 定期检查浏览器兼容性
-- 关注 Rspress 框架更新
-- 收集用户反馈优化体验
-- 保持设计趋势同步
+1. **版本控制**：记录主题变更历史
+2. **文档更新**：及时更新使用说明
+3. **测试验证**：在多种设备和浏览器中测试
+4. **性能监控**：定期检查加载性能
 
-## 📞 技术支持
+## 故障排除
 
-如果在使用过程中遇到问题：
-1. 查看 [Rspress 官方文档](https://rspress.dev)
-2. 检查浏览器开发者工具
-3. 参考本指南的故障排除部分
-4. 提交 GitHub Issue 寻求帮助
+### 常见问题
+
+#### 主题不生效
+- 检查 `rspress.config.ts` 中的 `theme` 配置
+- 确认主题目录结构正确
+- 验证 `index.tsx` 文件导出格式
+
+#### 样式冲突
+- 使用更具体的 CSS 选择器
+- 检查样式加载顺序
+- 利用 CSS 层叠优先级规则
+
+#### 构建错误
+- 检查 TypeScript 类型定义
+- 确认所有依赖项已安装
+- 查看控制台错误信息
+
+### 调试技巧
+
+1. **开发者工具**：使用浏览器开发者工具检查元素
+2. **CSS 变量检查**：在控制台查看 CSS 变量值
+3. **组件树分析**：使用 React DevTools 分析组件结构
+
+## 未来扩展
+
+### 计划功能
+- **主题切换器**：用户可选择不同主题风格
+- **动画效果**：添加页面过渡和交互动画
+- **国际化支持**：多语言主题适配
+- **插件系统**：支持第三方主题插件
+
+### 技术升级
+- **CSS-in-JS**：考虑使用 styled-components
+- **设计系统**：建立完整的设计令牌系统
+- **组件库**：抽象可复用的主题组件
+
+## 贡献指南
+
+欢迎为主题改进贡献代码！请遵循以下步骤：
+
+1. Fork 项目仓库
+2. 创建功能分支
+3. 提交代码变更
+4. 编写测试用例
+5. 提交 Pull Request
+
+## 许可证
+
+本主题基于 MIT 许可证开源，详见 [LICENSE](LICENSE) 文件。
 
 ---
 
-**主题设计目标**：为 TanStack Table 文档网站提供现代化、专业化、用户友好的视觉体验，同时保持良好的性能和兼容性。
+**最后更新**：2024年12月
+**版本**：1.0.0
+**兼容性**：Rspress 2.0.0-beta.18+

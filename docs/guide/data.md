@@ -133,7 +133,7 @@ const columns = [
 ]
 ```
 
-这在[列定义指南](column-defs)中有更详细的讨论。
+这在[列定义指南](column-defs.md)中有更详细的讨论。
 
 > 注意：您的 json 数据中的"键"通常可以是任何内容，但键中的任何句点都将被解释为深层键并将导致错误。
 
@@ -179,7 +179,7 @@ type User = {
 }
 ```
 
-其中 `subRows` 是 `User` 对象的可选数组。这在[展开指南](expanding)中有更详细的讨论。
+其中 `subRows` 是 `User` 对象的可选数组。这在[展开指南](expanding.md)中有更详细的讨论。
 
 ### 给数据一个"稳定"的引用
 
@@ -239,7 +239,7 @@ export default function MyComponent() {
 
 ### TanStack Table 如何转换数据
 
-稍后，在这些文档的其他部分中，您将看到 TanStack Table 如何处理您传递给表格的 `data` 并生成用于创建表格的行和单元格对象。您传递给表格的 `data` 永远不会被 TanStack Table 改变，但行和单元格中的实际值可能会被列定义中的访问器或由[行模型](row-models)执行的其他功能（如分组或聚合）转换。
+稍后，在这些文档的其他部分中，您将看到 TanStack Table 如何处理您传递给表格的 `data` 并生成用于创建表格的行和单元格对象。您传递给表格的 `data` 永远不会被 TanStack Table 改变，但行和单元格中的实际值可能会被列定义中的访问器或由[行模型](row-models.md)执行的其他功能（如分组或聚合）转换。
 
 ### TanStack Table 可以处理多少数据？
 
@@ -247,4 +247,4 @@ export default function MyComponent() {
 
 构建数据网格的开发人员的默认思维模式是为大型数据集实现服务器端分页、排序和过滤。这通常仍然是一个好主意，但许多开发人员低估了现代浏览器和正确优化实际上可以在客户端处理多少数据。如果您的表格永远不会有超过几千行，您可能可以利用 TanStack Table 中的客户端功能，而不是在服务器上自己实现它们。当然，在承诺让 TanStack Table 的客户端功能处理您的大型数据集之前，您应该使用实际数据进行测试，看看它是否能够满足您的需求。
 
-这在[分页指南](pagination#should-you-use-client-side-pagination)中有更详细的讨论。
+这在[分页指南](pagination.md#should-you-use-client-side-pagination)中有更详细的讨论。

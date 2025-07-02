@@ -4,7 +4,7 @@ title: 行指南
 
 ## API
 
-[行 API](../api/core/row)
+[行 API](../api/core/row.md)
 
 ## 行指南
 
@@ -24,7 +24,7 @@ const row = table.getRow(rowId)
 
 #### 行模型
 
-`table` 实例生成 `row` 对象并将它们存储在称为["行模型"](row-models)的有用数组中。这在[行模型指南](row-models)中有更详细的讨论，但这里是您可能访问行模型的最常见方式。
+`table` 实例生成 `row` 对象并将它们存储在称为["行模型"](row-models.md)的有用数组中。这在[行模型指南](row-models.md)中有更详细的讨论，但这里是您可能访问行模型的最常见方式。
 
 ##### 渲染行
 
@@ -85,7 +85,7 @@ const firstName = row.original.firstName // { firstName: 'John', lastName: 'Doe'
 
 ### 子行
 
-如果您使用分组或展开功能，您的行可能包含子行或父行引用。这在[展开指南](expanding)中有更详细的讨论，但这里是处理子行的有用属性和方法的快速概述。
+如果您使用分组或展开功能，您的行可能包含子行或父行引用。这在[展开指南](expanding.md)中有更详细的讨论，但这里是处理子行的有用属性和方法的快速概述。
 
 - `row.subRows`：行的子行数组。
 - `row.depth`：行相对于根行数组的深度（如果嵌套或分组）。根级行为 0，子行为 1，孙行为 2，等等。

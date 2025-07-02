@@ -6,8 +6,8 @@ title: 排序指南
 
 想要跳到实现部分？查看这些示例：
 
-- [排序](../framework/react/examples/sorting)
-- [过滤器](../framework/react/examples/filters)
+- [排序](https://github.com/TanStack/table/tree/main/examples/react/sorting)
+- [过滤器](https://github.com/TanStack/table/tree/main/examples/react/filters)
 
 ## API
 

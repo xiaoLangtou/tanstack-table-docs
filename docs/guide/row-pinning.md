@@ -6,11 +6,11 @@ title: 行固定指南
 
 想要跳转到实现？查看这些示例：
 
-- [row-pinning](../framework/react/examples/row-pinning)
+- [row-pinning](https://github.com/TanStack/table/tree/main/examples/react/row-pinning)
 
 ## API
 
-[行固定 API](../api/features/row-pinning)
+[行固定 API](../api/features/row-pinning.md)
 
 ## 行固定指南
 

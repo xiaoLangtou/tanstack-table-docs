@@ -6,11 +6,11 @@ title: 模糊过滤指南
 
 想要跳转到实现？查看这些示例：
 
-- [filters-fuzzy](../framework/react/examples/filters-fuzzy)
+- [filters-fuzzy](https://github.com/TanStack/table/tree/main/examples/react/filters-fuzzy)
 
 ## API
 
-[过滤器 API](../api/features/filters)
+[过滤器 API](../api/features/filters.md)
 
 ## 模糊过滤指南
 

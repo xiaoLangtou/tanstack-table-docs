@@ -6,12 +6,12 @@ title: 列大小调整指南
 
 想要跳转到实现？查看这些示例：
 
-- [column-sizing](../framework/react/examples/column-sizing)
-- [column-resizing-performant](../framework/react/examples/column-resizing-performant)
+- [column-sizing](https://github.com/TanStack/table/tree/main/examples/react/column-sizing)
+- [column-resizing-performant](https://github.com/TanStack/table/tree/main/examples/react/column-resizing-performant)
 
 ## API
 
-[列大小调整 API](../api/features/column-sizing)
+[列大小调整 API](../api/features/column-sizing.md)
 
 ## 列大小调整指南
 
@@ -166,7 +166,7 @@ TanStack Table 跟踪一个名为 `columnSizingInfo` 的状态对象，你可以
 
 如果你正在创建大型或复杂的表格（并且使用 React 😉），你可能会发现，如果你没有为渲染逻辑添加适当的记忆化，你的用户在调整列大小时可能会遇到性能下降。
 
-我们创建了一个[高性能列调整大小示例](../framework/react/examples/column-resizing-performant)，演示了如何在可能否则渲染缓慢的复杂表格中实现 60 fps 列调整大小渲染。建议你只查看该示例以了解如何完成，但这些是要记住的基本事项：
+我们创建了一个[高性能列调整大小示例](https://github.com/TanStack/table/tree/main/examples/react/column-resizing-performant)，演示了如何在可能否则渲染缓慢的复杂表格中实现 60 fps 列调整大小渲染。建议你只查看该示例以了解如何完成，但这些是要记住的基本事项：
 
 1. 不要在每个标题和每个数据单元格上使用 `column.getSize()`。相反，提前一次性计算所有列宽度，**记忆化**！
 2. 在调整大小进行时记忆化你的表格主体。

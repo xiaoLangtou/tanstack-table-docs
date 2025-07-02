@@ -6,17 +6,17 @@ title: 列固定指南
 
 想要跳转到实现？查看这些示例：
 
-- [column-pinning](../framework/react/examples/column-pinning)
-- [sticky-column-pinning](../framework/react/examples/column-pinning-sticky)
+- [column-pinning](https://github.com/TanStack/table/tree/main/examples/react/column-pinning)
+- [sticky-column-pinning](https://github.com/TanStack/table/tree/main/examples/react/column-pinning-sticky)
 
  ### 其他示例
  
-- [Svelte column-pinning](../framework/svelte/examples/column-pinning)
-- [Vue column-pinning](../framework/vue/examples/column-pinning)
+- [Svelte column-pinning](https://github.com/TanStack/table/tree/main/examples/svelte/column-pinning)
+- [Vue column-pinning](https://github.com/TanStack/table/tree/main/examples/vue/column-pinning)
 
 ## API
 
-[列固定 API](../api/features/column-pinning)
+[列固定 API](../api/features/column-pinning.md)
 
 ## 列固定指南
 

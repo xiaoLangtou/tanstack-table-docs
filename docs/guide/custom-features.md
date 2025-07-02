@@ -6,7 +6,7 @@ title: 自定义功能指南
 
 想要跳到实现部分？查看这些示例：
 
-- [custom-features](../framework/react/examples/custom-features)
+- [custom-features](https://github.com/TanStack/table/tree/main/examples/react/custom-features)
 
 ## 自定义功能指南
 
@@ -108,7 +108,7 @@ export interface TableFeature<TData extends RowData = any> {
 
 让我们通过为一个假设的用例制作自定义表格功能来演示。假设我们想要向表格实例添加一个功能，允许用户更改表格的"密度"（单元格的内边距）。
 
-查看完整的 [custom-features](../framework/react/examples/custom-features) 示例以查看完整实现，但这里是创建自定义功能步骤的深入介绍。
+查看完整的 [custom-features](https://github.com/TanStack/table/tree/main/examples/react/custom-features) 示例以查看完整实现，但这里是创建自定义功能步骤的深入介绍。
 
 #### 步骤 1：设置 TypeScript 类型
 

@@ -6,11 +6,11 @@ title: 全局分面指南
 
 想要跳到实现部分？查看这些示例：
 
-- [filters-faceted](../framework/react/examples/filters)
+- [filters-faceted](https://github.com/TanStack/table/tree/main/examples/react/filters)
 
 ## API
 
-[全局分面 API](../api/features/global-faceting)
+[全局分面 API](../api/features/global-faceting.md)
 
 ## 全局分面指南
 

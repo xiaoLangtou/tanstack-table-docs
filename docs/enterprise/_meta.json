@@ -1,6 +1,11 @@
 [
   {
     "type": "file",
+    "name": "index",
+    "label": "概述"
+  },
+  {
+    "type": "file",
     "name": "ag-grid",
     "label": "AG Grid"
   }

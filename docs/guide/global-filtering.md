@@ -10,7 +10,7 @@ title: 全局过滤指南
 
 ## API
 
-[全局过滤 API](../api/features/global-filtering)
+[全局过滤 API](../api/features/global-filtering.md)
 
 ## 全局过滤指南
 

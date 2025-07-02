@@ -6,9 +6,9 @@ title: 展开指南
 
 想要跳转到实现？查看这些示例：
 
-- [expanding](../framework/react/examples/expanding)
-- [grouping](../framework/react/examples/grouping)
-- [sub-components](../framework/react/examples/sub-components)
+- [expanding](https://github.com/TanStack/table/tree/main/examples/react/expanding)
+- [grouping](https://github.com/TanStack/table/tree/main/examples/react/grouping)
+- [sub-components](https://github.com/TanStack/table/tree/main/examples/react/sub-components)
 
 ## API
 

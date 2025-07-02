@@ -6,11 +6,11 @@ title: 列分面指南
 
 想要跳转到实现？查看这些示例：
 
-- [filters-faceted](../framework/react/examples/filters-faceted)
+- [filters-faceted](https://github.com/TanStack/table/tree/main/examples/react/filters-faceted)
 
 ## API
 
-[列分面 API](../api/features/column-faceting)
+[列分面 API](../api/features/column-faceting.md)
 
 ## 列分面指南
 

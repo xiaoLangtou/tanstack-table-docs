@@ -6,12 +6,12 @@ title: 列排序指南
 
 想要跳转到实现？查看这些示例：
 
-- [column-ordering](../framework/react/examples/column-ordering)
-- [column-dnd](../framework/react/examples/column-dnd)
+- [column-ordering](https://github.com/TanStack/table/tree/main/examples/react/column-ordering)
+- [column-dnd](https://github.com/TanStack/table/tree/main/examples/react/column-dnd)
 
 ## API
 
-[列排序 API](../api/features/column-ordering)
+[列排序 API](../api/features/column-ordering.md)
 
 ## 列排序指南
 
@@ -104,7 +104,7 @@ const handleDragEnd = (e: DragEvent) => {
 
 1. 如果你使用 React 18 或更新版本，请不要尝试使用 [`"react-dnd"`](https://react-dnd.github.io/react-dnd/docs/overview)。React DnD 在其时代是一个重要的库，但现在更新不够频繁，并且与 React 18 不兼容，特别是在 React 严格模式下。虽然仍然可以让它工作，但有更新的替代方案具有更好的兼容性并且维护更积极。React DnD 的 Provider 也可能干扰并与你可能想在应用中尝试的任何其他 DnD 解决方案冲突。
 
-2. 使用 [`"@dnd-kit/core"`](https://dndkit.com/)。DnD Kit 是一个现代、模块化和轻量级的拖放库，与现代 React 生态系统高度兼容，并且与语义 `<table>` 标记配合良好。官方 TanStack DnD 示例，[列 DnD](../framework/react/examples/column-dnd) 和 [行 DnD](../framework/react/examples/row-dnd)，现在都使用 DnD Kit。
+2. 使用 [`"@dnd-kit/core"`](https://dndkit.com/)。DnD Kit 是一个现代、模块化和轻量级的拖放库，与现代 React 生态系统高度兼容，并且与语义 `<table>` 标记配合良好。官方 TanStack DnD 示例，[列 DnD](https://github.com/TanStack/table/tree/main/examples/react/column-dnd) 和 [行 DnD](https://github.com/TanStack/table/tree/main/examples/react/row-dnd)，现在都使用 DnD Kit。
 
 3. 考虑其他 DnD 库，如 [`"react-beautiful-dnd"`](https://github.com/atlassian/react-beautiful-dnd)，但要注意它们可能很大的包大小、维护状态以及与 `<table>` 标记的兼容性。
 

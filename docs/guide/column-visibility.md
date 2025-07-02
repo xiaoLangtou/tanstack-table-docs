@@ -6,18 +6,18 @@ title: 列可见性指南
 
 想要跳转到实现？查看这些示例：
 
-- [column-visibility](../framework/react/examples/column-visibility)
-- [column-ordering](../framework/react/examples/column-ordering)
-- [sticky-column-pinning](../framework/react/examples/column-pinning-sticky)
+- [column-visibility](https://github.com/TanStack/table/tree/main/examples/react/column-visibility)
+- [column-ordering](https://github.com/TanStack/table/tree/main/examples/react/column-ordering)
+- [sticky-column-pinning](https://github.com/TanStack/table/tree/main/examples/react/column-pinning-sticky)
 
 ### 其他示例
 
-- [SolidJS column-visibility](../framework/solid/examples/column-visibility)
-- [Svelte column-visibility](../framework/svelte/examples/column-visibility)
+- [SolidJS column-visibility](https://github.com/TanStack/table/tree/main/examples/solid/column-visibility)
+- [Svelte column-visibility](https://github.com/TanStack/table/tree/main/examples/svelte/column-visibility)
 
 ## API
 
-[列可见性 API](../api/features/column-visibility)
+[列可见性 API](../api/features/column-visibility.md)
 
 ## 列可见性指南
 
