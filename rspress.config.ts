@@ -6,7 +6,25 @@ export default defineConfig({
   title: 'TanStack Table 中文文档',
   description: 'TanStack Table 是一个无头的、TypeScript 优先的表格库，为所有框架提供强大的数据网格体验。',
   base: '/tanstack-table-docs/',
+  
   outDir: 'doc_build',
+  globalStyles: path.join(__dirname, 'docs/theme/index.css'),
+  
+  // 主题配置
+  builderConfig: {
+    html: {
+      tags: [
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+          }
+        }
+      ]
+    }
+  },
+  
   themeConfig: {
     nav: [
       {
